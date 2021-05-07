@@ -1,0 +1,13 @@
+<div>
+    <div class="mt-2" *ngFor="let item of item_data.items; let i = index">
+        <table>
+            <tr><input type="text" id="{{i}}" placeholder="Enter a text" value=""
+                    style="background-color: rgb(0, 0, 0); color: white;" />
+                &nbsp;
+                <button style="margin-top: 8px;" class="btn btn-dark" (click)="save_data(item, i)">save</button>
+            </tr>
+        </table>
+
+    </div>
+
+</div>

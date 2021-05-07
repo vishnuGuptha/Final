@@ -1,0 +1,24 @@
+<div class="container">
+
+
+
+  <div class="row p-2 item_align">
+    <div class="col-md-3 mt-3 " *ngFor="let list of  service.item_list_arr; let i = index">
+      <div class="bd">
+        <div class=" text-center height_of_card ">
+          <h5 class="heading">Pannel Number : {{i+1}}</h5>
+          <span>Add a List Item :
+            &nbsp;
+            <button class="btn btn-dark" (click)="add_subItem(i)"> ➕ </button>
+          </span>
+          <p *ngIf="list.items.length < 1">Empty List</p>
+          <div class="child_card_items ">
+            <app-component-y [item_data]="list"></app-component-y>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
